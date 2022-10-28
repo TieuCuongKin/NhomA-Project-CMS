@@ -6498,3 +6498,61 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+
+.button-blue button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"] {
+	background-color: transparent !important;
+	text-overflow: initial !important;
+	font-size: 15px !important;
+	padding: 8px 8px !important;
+	text-transform: lowercase !important;
+	font-weight: 500;
+}
+
+.headlines .headlinesdate {
+	font-size: 0.8em;
+	width: 15%;
+	min-width: 55px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.headlinesdate .headlinesdm, .news > .headlines .headlinesdate, .headlinesdate {
+	float: left;
+	font-family: 'Prata', serif;
+}
+
+.list_news .headlines .headlinesday, .detail .headlinesdate .headlinesday {
+	border-bottom: 1px solid #000;
+}
+
+.headlinesdate .headlinesyear {
+	line-height: 3em;
+	float: left;
+	margin-left: 3px;
+}
+
+.headlines ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.headlines ul > li {
+	overflow: hidden;
+	display: table;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.headlines ul > li > .headlinestitle >a {
+	display: table-cell;
+	vertical-align: middle;
+	width: 85%;
+	font-size: 20px !important;
+	color: black !important;
+	font-weight: 300 !important;
+}
+
+.headlines ul > li > .headlinestitle >a:hover {
+	text-decoration: underline;
+}
