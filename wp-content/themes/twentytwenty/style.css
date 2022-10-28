@@ -57,6 +57,7 @@ with others.
 
 html,
 body {
+	
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -133,6 +134,7 @@ body {
 	font-size: 1.8rem;
 	letter-spacing: -0.015em;
 	text-align: left;
+	
 }
 
 @supports ( font-variation-settings: normal ) {
@@ -991,6 +993,7 @@ th {
 section {
 	padding: 5rem 0;
 	width: 100%;
+	display: flex;
 }
 
 .section-inner {
@@ -998,6 +1001,7 @@ section {
 	margin-right: auto;
 	max-width: 120rem;
 	width: calc(100% - 4rem);
+
 }
 
 .section-inner.max-percentage {
@@ -1006,10 +1010,12 @@ section {
 
 .section-inner.thin {
 	max-width: 58rem;
+
 }
 
 .section-inner.small {
 	max-width: 80rem;
+
 }
 
 .section-inner.medium {
@@ -1018,6 +1024,8 @@ section {
 
 .section-inner.no-margin {
 	margin: 0;
+	display: flex;
+	
 }
 
 
@@ -1037,6 +1045,7 @@ section {
 	-ms-user-select: none;
 	text-align: inherit;
 	user-select: none;
+	
 }
 
 button.toggle {
@@ -1260,19 +1269,19 @@ button.toggle {
 
 /* Search Form ------------------------------- */
 
-.search-form {
+.card card-sm {
 	align-items: stretch;
 	display: flex;
 	flex-wrap: nowrap;
 	margin: 0 0 -0.8rem -0.8rem;
 }
 
-.search-form .search-field,
-.search-form .search-submit {
+.card card-sm .search-1,
+.card card-sm .submit {
 	margin: 0 0 0.8rem 0.8rem;
 }
 
-.search-form label {
+.card card-sm  {
 	align-items: stretch;
 	display: flex;
 	font-size: inherit;
@@ -1280,16 +1289,16 @@ button.toggle {
 	width: 100%;
 }
 
-.search-form .search-field {
+.card card-sm .search-1 {
 	width: 100%;
 }
 
-.search-form .search-submit {
+.card card-sm .submit {
 	flex-shrink: 0;
 }
 
-.search-form .search-submit:focus,
-.search-form .search-submit:hover {
+.card card-sm .submit:focus,
+.card card-sm .submit:hover {
 	text-decoration: none;
 }
 
@@ -2597,12 +2606,12 @@ h2.entry-title {
 	width: calc(100% - 5rem);
 }
 
-.post-inner {
-	padding-top: 5rem;
+.post-inner.thin {
+	padding-top: -8rem;
 }
 
-.reduced-spacing.missing-post-thumbnail .post-inner {
-	padding-top: 0;
+.reduced-spacing.missing-post-thumbnail .post-inner.thin {
+	padding-top: 8;
 }
 
 
@@ -5091,7 +5100,7 @@ a.to-the-top > * {
 	/* SEARCH RESULTS */
 
 	.no-search-results-form {
-		padding-top: 8rem;
+		padding-top: 6rem;
 	}
 
 	/* Post: Single -------------------------- */
@@ -5474,7 +5483,7 @@ a.to-the-top > * {
 	}
 
 	div.comment:first-of-type {
-		margin-top: 5rem;
+		margin-top: 5rem;;
 	}
 
 	.comment-meta {
@@ -6498,3 +6507,222 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+/* search 1 */
+@media ( min-width: 1220px ){
+	input.form-control.form-control-lg.form-control-borderless {
+		border: none;
+		outline: none;
+		box-shadow: none;
+		padding-left: inherit;
+		font-size: 23px;
+		
+	}
+	.card-body.row.no-gutters.align-items-center{
+		-ms-flex-align: center!important;
+		align-items: center!important;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	
+	button.btn.btn-lg.btn-success{
+		
+		font-size: 2.2rem;
+		line-height: 1.5;
+		border-radius: .4rem;
+		
+	}
+	.no-search-results-form.section-inner.thin{
+	min-width: 100%;
+	background-color: rgb(248, 236, 236);
+	cursor: pointer;
+	}
+	
+	.content{
+	padding-right: 20%;
+	padding-left: 20%;
+
+	
+	}
+
+}
+.no-search-results-form {
+	padding-top: 5rem;
+}
+/* catories*/
+li.cate-name {
+	color: #7FB1DB;
+    line-height: 5rem;
+    /* width: 200px; */
+    list-style: none;
+    border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 10px;
+}
+ul li.cate-name a {
+    text-decoration: none;
+    color: #428bca;
+}
+li.cate-name:last-child{
+	border-bottom: 0px solid gray;
+}
+.crossedbg-categories {
+	/* width: 270px; */
+    background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png);
+    height: 15px;
+}
+.cate {
+	padding-bottom: 1px;
+	margin-left: 20px;
+    width: 321px;
+	margin-top: 90px;
+    height: auto;
+}
+.cate h2{
+	margin-bottom: 2px;
+    font-weight: 800;
+}
+.cate-name a {
+    font-size: 14px;
+}
+.ul-cate {
+    /* width: 270px; */
+    background: white;
+}
+.ul-cate ul{
+	margin: 0;
+	padding: 20px;
+}
+li.cate-name::before {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f5ce31;
+    content: "\2022";
+    font-size: 2em;
+    padding-right: .5em;
+    position: relative;
+    top: .15em;
+}
+
+header.entry-header.has-text-align-center.header-footer-group{
+background-color:#f5efe0 ;
+}
+/* recent post */
+.rp-box {
+	position: relative;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container li:hover {
+    margin-left: 0px;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts li a{
+	color: #428bca !important;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: initial;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts li {
+	color: #428bca;
+	text-decoration: none;
+	font-size: 14px;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 15px 0 !important;
+	font-weight: initial;
+	margin: 0px 10px;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts li:last-child {
+	border-bottom: none;
+}
+
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts li::before{
+	content:"\f111";
+	font: normal normal normal 10px/1 FontAwesome;
+	padding-right: 15px;
+	color: #f5ce31;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts li a:hover{
+	text-decoration: underline !important;
+	color: #2a6496 !important;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts {
+	background: white !important;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts {
+	padding: 15px;
+}
+.crossedbg{
+	position: absolute;
+	top: -3%;
+	left:1px;
+	width: 100%;
+	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_cr_grey.png);
+    height: 13px;
+	padding-top: 5%;
+}
+.rp-box .widget_block {
+	margin-top: 0px !important;
+	padding-right: 0px !important;
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container .wp-block-latest-posts{
+	margin-top: 0px !important;
+	
+}
+.rp-box .widget_block .widget-content .wp-block-group .wp-block-group__inner-container h2{
+	color: black;
+	border: none;
+	padding-left: 0px;
+    font-weight: 800;
+	font-size: 2.8rem !important;
+	margin-bottom: 20px;
+}
+.rp-box .widget_block .widget-content .wp-block-group{
+	margin-top: 90px;
+}
+
+/* search form 2 */
+.col-md-12.top_news_block_desc{
+	font-size: 0.9em;
+	padding: 15px;
+}
+.col-md-12.top_news_block_desc .topnewstime {
+    margin-top: 45px;
+    text-align: center;
+    padding-left: 0;
+}
+.list_new_view .col-md-12.top_news_block_desc .topnewstime {
+    padding-left: 27px;
+}
+.list_new_view .col-md-12.top_news_block_desc .topnewstime.is-search{
+	padding-left: 0;
+}
+
+.topnewstime > .topnewsdate {
+    font-family: 'Prata', serif;
+    /* font-size: 3.1em; */
+    font-size: 2.8em;
+    line-height: 1em;
+    margin-left: 15px;
+}
+.topnewstime > .topnewsmonth {
+    text-transform: uppercase;
+    /* font-size: 0.9em; */
+    font-size: 12px;
+    margin-left: 15px;
+}
+.top_news_block_desc{
+	transition: all 0.1s linear;
+	font-family: 'Open Sans', sans-serif;
+}
+.col-md-9.col-xs-9.shortdesc{
+	border-left: 1px solid #666;
+}.col-md-9.col-xs-9.shortdesc.is-search{border-left: 1px solid #666;
+	padding-right: 30px;}
+.row{
+	position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+	
+}
+hr.post-separator.styled-separator.is-style-wide.section-inner{
+	color: #6d6d6d00;
+}
+
+
+/* link */

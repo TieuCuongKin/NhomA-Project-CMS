@@ -20,13 +20,25 @@ $twentytwenty_unique_id = twentytwenty_unique_id( 'search-form-' );
 $twentytwenty_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . esc_attr( $args['aria_label'] ) . '"' : '';
 // Backward compatibility, in case a child theme template uses a `label` argument.
 if ( empty( $twentytwenty_aria_label ) && ! empty( $args['label'] ) ) {
-	$twentytwenty_aria_label = 'aria-label="' . esc_attr( $args['label'] ) . '"';
+   $twentytwenty_aria_label = 'aria-label="' . esc_attr( $args['label'] ) . '"';
 }
 ?>
-<form role="search" <?php echo $twentytwenty_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="<?php echo esc_attr( $twentytwenty_unique_id ); ?>">
-		<span class="screen-reader-text"><?php _e( 'Search for:', 'twentytwenty' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></span>
-		<input type="search" id="<?php echo esc_attr( $twentytwenty_unique_id ); ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentytwenty' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	</label>
-	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'twentytwenty' ); ?>" />
-</form>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+ <div class="content">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-1">
+                                        <i class="fas fa-search h2 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-9">
+                                        <input id="<?php echo esc_attr( $twentytwenty_unique_id ); ?>" class="form-control form-control-lg form-control-borderless" class="search-1" type="search" placeholder="Search topics or keywords">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-2">
+                                        <button class="btn btn-lg btn-success" class="submit" type="submit-1">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+ </div>
