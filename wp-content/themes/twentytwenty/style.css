@@ -6498,3 +6498,12 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+
+.button-blue button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"] {
+	background-color: transparent !important;
+	text-overflow: initial !important;
+	font-size: 15px !important;
+	padding: 8px 8px !important;
+	text-transform: lowercase !important;
+	font-weight: 500;
+}
