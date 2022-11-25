@@ -36,9 +36,9 @@ if( $ed_blog && ( $blog_heading || $qry->have_posts() ) ){ ?>
                 <?php
                 while ($qry->have_posts()) {
                     $qry->the_post(); ?>
-                    <article class="post grid-container">
+                    <article class="grid-container">
 
-                        <figure class="post-thumbnail grid-item item1">
+                        <div class="grid-item item1">
                             <a href="<?php the_permalink(); ?>"
                                class="post-thumbnail">
                                 <?php
@@ -50,7 +50,7 @@ if( $ed_blog && ( $blog_heading || $qry->have_posts() ) ){ ?>
                                 }
                                 ?>
                             </a>
-                        </figure>
+                        </div>
                         <div class="grid-item item2">
                             <header>
                                 <h3 class="entry-title">

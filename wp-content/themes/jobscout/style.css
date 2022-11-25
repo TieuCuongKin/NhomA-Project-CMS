@@ -2915,7 +2915,8 @@ section.article-section {
 }
 
 .article-section .article-wrap article img {
-  width: 100%;
+  width: 200px;
+  height: 200px !important;
 }
 
 .article-section .article-wrap header.entry-header {
@@ -8163,26 +8164,31 @@ RESPONSIVE STYLESHEET
 
 .grid-container {
   display: grid;
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: left;
-  padding: 20px;
   font-size: 16px;
 }
 
 .item1 {
   grid-column: 1 ;
   grid-row: 1;
+  padding: 20px;
 }
 
 .item2 {
   grid-column: 2;
   grid-row: 1;
+  padding: 20px 20px 10px 10px;
 }
 
 .post {
   background-color: #fff !important;
+}
+
+.grid-item p {
+  margin-bottom: 0.5em !important;
 }
