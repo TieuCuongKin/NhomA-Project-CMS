@@ -82,6 +82,5 @@ $desciption = get_the_excerpt($post);
 	<?php } ?>
     <div class="desciption">
         <?php echo  $desciption ?>
-    </div>
-
+	</div>
 </article>

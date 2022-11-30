@@ -10,23 +10,23 @@ if ( ! function_exists( 'jobscout_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time.
  */
 function jobscout_posted_on( $single = false ) {
-	$ed_updated_post_date = get_theme_mod( 'ed_post_update_date', true );
-    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		if( $ed_updated_post_date ){
-            $time_string = '<time class="entry-date published updated" datetime="%3$s" itemprop="dateModified">%4$s</time><time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';		  
-		}else{
-            $time_string = '<time class="entry-date published" datetime="%1$s" itemprop="datePublished">%2$s</time><time class="updated" datetime="%3$s" itemprop="dateModified">%4$s</time>';  
-		}        
-	}else{
-	   $time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time><time class="updated" datetime="%3$s" itemprop="dateModified">%4$s</time>';   
-	}
+	// $ed_updated_post_date = get_theme_mod( 'ed_post_update_date', true );
+    // if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+	// 	if( $ed_updated_post_date ){
+    //         $time_string = '<time class="entry-date published updated" datetime="%3$s" itemprop="dateModified">%4$s</time><time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';		  
+	// 	}else{
+    //         $time_string = '<time class="entry-date published" datetime="%1$s" itemprop="datePublished">%2$s</time><time class="updated" datetime="%3$s" itemprop="dateModified">%4$s</time>';  
+	// 	}        
+	// }else{
+	//    $time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time><time class="updated" datetime="%3$s" itemprop="dateModified">%4$s</time>';   
+	// }
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
+	// $time_string = sprintf( $time_string,
+	// 	esc_attr( get_the_date( 'c' ) ),
+	// 	esc_html( get_the_date() ),
+	// 	esc_attr( get_the_modified_date( 'c' ) ),
+	// 	esc_html( get_the_modified_date() )
+	// );
 
     $time_svg = '';
     if( $single ){
@@ -47,7 +47,7 @@ if ( ! function_exists( 'jobscout_posted_by' ) ) :
 function jobscout_posted_by() {
 	$byline = sprintf( '<span itemprop="name"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" itemprop="url">' . esc_html( get_the_author() ) . '</a></span>' 
     );
-	echo '<span class="byline" itemprop="author" itemscope itemtype="https://schema.org/Person">' . $byline . '</span>';
+	// echo '<span class="byline" itemprop="author" itemscope itemtype="https://schema.org/Person">' . $byline . '</span>';
 }
 endif;
 

@@ -8,7 +8,8 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Blog">
-	<?php 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Blog">
+	<?php  echo $count;
         /**
          * @hooked jobscout_post_thumbnail - 10
         */
