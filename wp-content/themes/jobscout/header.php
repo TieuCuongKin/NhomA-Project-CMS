@@ -23,7 +23,6 @@
      * @hooked jobscout_head
     */
     do_action( 'jobscout_before_wp_head' );
-    wp_enqueue_style ('theme-style', get_template_directory_uri().'/style.css');
     wp_head(); ?>
 </head>
 
