@@ -262,13 +262,6 @@ function jobscout_entry_header(){ ?>
 
             if( is_single() ){
                 if( ! $ed_cat_single ) jobscout_category();
-            }else{
-                if( 'post' === get_post_type() ){
-                    echo '<div class="entry-meta">';
-                    if( ! $hide_author ) jobscout_posted_by();
-                    if( ! $hide_date ) jobscout_posted_on();
-                    echo '</div>';
-                }
             }
 
             if ( is_singular() ) :
@@ -282,7 +275,7 @@ function jobscout_entry_header(){ ?>
 }
 endif;
 add_action( 'jobscout_post_entry_content', 'jobscout_entry_header', 10 );
-// add_action( 'jobscout_before_page_entry_content', 'jobscout_entry_header', 10 );
+add_action( 'jobscout_before_page_entry_content', 'jobscout_entry_header', 10 );
 add_action( 'jobscout_before_single_post_entry_content', 'jobscout_entry_header', 10 );
 
 if( ! function_exists( 'jobscout_entry_content' ) ) :
@@ -310,7 +303,7 @@ endif;
 add_action( 'jobscout_post_entry_content', 'jobscout_entry_content', 15 );
 add_action( 'jobscout_page_entry_content', 'jobscout_entry_content', 15 );
 add_action( 'jobscout_single_post_entry_content', 'jobscout_entry_content', 15 );
-// add_action( 'jobscout_single_post_entry_content', 'jobscout_entry_content', 15 );
+add_action( 'jobscout_single_post_entry_content', 'jobscout_entry_content', 15 );
 add_action( 'jobscout_before_single_job_content', 'jobscout_entry_content', 15 );
 
 if( ! function_exists( 'jobscout_entry_footer' ) ) :
@@ -368,7 +361,7 @@ function jobscout_get_single_job_title(){
     <?php
 }
 endif;
-// add_action( 'jobscout_before_single_job_content', 'jobscout_get_single_job_title' );
+add_action( 'jobscout_before_single_job_content', 'jobscout_get_single_job_title' );
 
 if( ! function_exists( 'jobscout_navigation' ) ) :
 /**
