@@ -21,7 +21,7 @@ $job_salary   = get_post_meta( get_the_ID(), '_job_salary', true );
 $job_featured = get_post_meta( get_the_ID(), '_featured', true );
 $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 $created_at = $post->post_date;
-$job_overview = get_the_excerpt($post);
+$desciption = get_the_excerpt($post);
 
 
 ?>
@@ -80,8 +80,8 @@ $job_overview = get_the_excerpt($post);
 	<?php if( $job_featured ){ ?>
 		<div class="featured-label"><?php esc_html_e( 'Featured', 'jobscout' ); ?></div>
 	<?php } ?>
-    <div class="job-overview">
-        <?php echo  $job_overview ?>
+    <div class="desciption">
+        <?php echo  $desciption ?>
     </div>
 
 </article>
