@@ -260,16 +260,16 @@ function jobscout_entry_header(){ ?>
             $hide_author   = get_theme_mod( 'ed_post_author', false );
             $hide_date     = get_theme_mod( 'ed_post_date', false );
 
-            if( is_single() ){
-                if( ! $ed_cat_single ) jobscout_category();
-            }else{
-                if( 'post' === get_post_type() ){
-                    echo '<div class="entry-meta">';
-                    if( ! $hide_author ) jobscout_posted_by();
-                    if( ! $hide_date ) jobscout_posted_on();
-                    echo '</div>';
-                }
-            }
+            // if( is_single() ){
+            //     if( ! $ed_cat_single ) jobscout_category();
+            // }else{
+            //     if( 'post' === get_post_type() ){
+            //         echo '<div class="entry-meta">';
+            //         if( ! $hide_author ) jobscout_posted_by();
+            //         if( ! $hide_date ) jobscout_posted_on();
+            //         echo '</div>';
+            //     }
+            // }
 
             if ( is_singular() ) :
                 the_title( '<h1 class="entry-title">', '</h1>' );
@@ -291,7 +291,7 @@ if( ! function_exists( 'jobscout_entry_content' ) ) :
 */
 function jobscout_entry_content(){ 
     $ed_excerpt = get_theme_mod( 'ed_excerpt', true ); ?>
-    <div class="entry-content" itemprop="text">
+    <div class="entry-content customItem" itemprop="text">
 		<?php
 			if( is_singular() || ! $ed_excerpt || ( get_post_format() != false ) ){
                 the_content();    
@@ -300,7 +300,7 @@ function jobscout_entry_content(){
     				'after'  => '</div>',
     			) );
             }else{
-                the_excerpt();
+                echo mb_substr( get_the_excerpt(), 0, 125 );
             }
 		?>
 	</div><!-- .entry-content -->
