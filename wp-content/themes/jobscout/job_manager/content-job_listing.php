@@ -75,12 +75,15 @@ $desciption = get_the_excerpt($post);
 			</div>
 
 		</div>
+
 	</div>
 
 	<?php if( $job_featured ){ ?>
 		<div class="featured-label"><?php esc_html_e( 'Featured', 'jobscout' ); ?></div>
 	<?php } ?>
     <div class="desciption">
-        <?php echo  $desciption ?>
-	</div>
+        <?php
+        the_content()
+        ?>
+    </div>
 </article>
